@@ -1,0 +1,76 @@
+在c语言中，类型的最小值是1字节（8位）。
+int i;
+scanf("%d",&i);
+流：就是流水，没有边界。
+标准输入，从终端上输入字符流到了字符串中。
+printf("%d\n",i);
+标准输出，流到屏幕上。
+计算长方体的面积：
+#include
+#include
+int main(int argc, const char *argv[])
+{
+int len,width;
+printf("please input len:");
+scanf("%d",&len);
+printf("please input width:");
+scanf("%d",&width);
+int area;
+area = len * width;
+printf("%d\n",area);
+return 0;
+}
+常量：不可以更改的量。不可以写，但可以读。只读变量。
+#define MAX 100
+预处理阶段
+
+const int MAX=20;
+编译阶段
+
+规范：对常量名需要大写。
+#include
+#include
+int main(int argc, const char *argv[])
+{
+const int MAX = 10;
+//MAX= 4;   //此变量是只读变量，不可写。
+  printf("%d\n",MAX);
+return 0;
+}
+
+计算圆的面积：
+#include
+#include
+#define PI 3.14159
+int main(int argc, const char *argv[])
+{
+int r;
+printf("please input radio:");
+scanf("%d",&r);
+float yuan = PI*r*r;
+printf("%f",yuan);
+return 0;
+}
+填充占位符：
+#include
+#include
+#define PI 3.14159
+int main(int argc, const char *argv[])
+{
+int a = 10;
+float b =11.2132f;
+printf("first is :%d , second is %f",a,b);
+return 0;
+}
+注意：scanf不要加\n
+#include
+#include
+#define PI 3.14159
+int main(int argc, const char *argv[])
+{
+int a;
+int b;
+scanf("%d%d",&a,&b);
+printf("a= %d,b = %d",a,b);
+return 0;
+}
